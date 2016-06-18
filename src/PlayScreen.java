@@ -294,16 +294,18 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
             if (pirate.isLive == true) {
                 pirate.draw(bufferedGraphics);
             } else if (pirate.isLive == false) {
-                pirate = null;
+
                 pressN();
+
             }
         }
         if (player != null) {
             if (player.isLive == true) {
                 player.draw(bufferedGraphics);
             } else if (player.isLive == false) {
-                player = null;
+
                 pressN();
+
             }
         }
         g.drawImage(bufferedImage, 0, 0, null);

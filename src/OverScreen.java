@@ -10,7 +10,7 @@ public class OverScreen implements Screen {
     Image over;
     public OverScreen(){
         try {
-            over =   ImageIO.read(new File("Resources/Image 1239.png"));
+            over =   ImageIO.read(new File("Resources/over.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
