@@ -33,12 +33,14 @@ public class MenuScreen implements Screen {
         PlayScreen playScreen = new PlayScreen();
         frame.addKeyListener(playScreen);
         frame.addMouseListener(playScreen);
+        playScreen.setFrame(frame);
         GameManager.getInstance().getStackScreen().push(playScreen);
     }
     public  void pressM(){
         SupportScreen supportScreen = new SupportScreen();
         supportScreen.setFrame(frame);
         frame.addMouseListener(supportScreen);
+        supportScreen.setFrame(frame);
 
         GameManager.getInstance().getStackScreen().push(supportScreen);
     }

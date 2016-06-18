@@ -21,6 +21,15 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
 //    long startTime;
 //    long startTime01;
 //    int count = 0;
+    Frame frame;
+    int dem=0;
+    public void setFrame(Frame frame) {
+        this.frame = frame;
+    }
+
+    public Frame getFrame() {
+        return frame;
+    }
 
     Image background;
     Image exit;
@@ -35,9 +44,11 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
     int count = 0;
 
     public PlayScreen(){
+
         audioclass = new Audioclass();
+
         startTime02 = System.currentTimeMillis();
-        pirate = new Pirate(400, 500, "haitac");
+        pirate = new Pirate(200, 200, "haitac");
         player = new Player(500, 400, "player");
         try {
             exit = ImageIO.read(new File("Resources/exit.png"));
@@ -58,7 +69,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
         nonExplovsiveBarriers.add(new NonExplovsiveBarrier(200, 25, "CaySuongRong"));
         nonExplovsiveBarriers.add(new NonExplovsiveBarrier(238, 25, "CaySuongRong"));
         nonExplovsiveBarriers.add(new NonExplovsiveBarrier(278, 25, "House01"));
-        nonExplovsiveBarriers.add(new NonExplovsiveBarrier(700, 25, "House01"));
+       // nonExplovsiveBarriers.add(new NonExplovsiveBarrier(700, 25, "House01"));
         nonExplovsiveBarriers.add(new NonExplovsiveBarrier(700, 82, "House01"));
         nonExplovsiveBarriers.add(new NonExplovsiveBarrier(520, 25, "House01"));
         nonExplovsiveBarriers.add(new NonExplovsiveBarrier(560, 25, "CaySuongRong"));
@@ -140,6 +151,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                     System.out.println("1");
                     return 1;
                 }
+                return -1;
             }
         }
         for (int i = 0; i < nonExplovsiveBarriers.size(); i++) {
@@ -166,6 +178,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                     System.out.println("1");
                     return 1;
                 }
+                return -1;
             }
         }
         if (player.positionX >= 690) player.positionX = 690;
@@ -176,11 +189,14 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
         return 0;
     }
     public void pressN() {
-        GameManager.getInstance().getStackScreen().push(new OverScreen());
+        OverScreen  overScreen  = new OverScreen();
+        frame.addMouseListener(overScreen);
+        GameManager.getInstance().getStackScreen().push(overScreen);
     }
 
     @Override
     public void update() {
+        System.out.println(dem);
         count++;
         if (pirate.boomPirates.size() == 0) {
             if (count == 117) {
@@ -188,7 +204,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                 BoomPirate boomPirate = pirate.dropBoom();
                 count = 0;
                 for (ExplosiveBarrier explosiveBarrier : explosiveBarriers) {
-                    if (getDistance(explosiveBarrier.positionX + 45, explosiveBarrier.positionY + 45, boomPirate.positionX + 45, boomPirate.positionY + 45) <= 120) {
+                    if (getDistance(explosiveBarrier.positionX + 45, explosiveBarrier.positionY + 45, boomPirate.positionX + 45, boomPirate.positionY + 45) <= 70) {
                         boomPirate.register(explosiveBarrier);// checking a distance before register
 
                     }
@@ -228,13 +244,13 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        if (testMove(pirate)==0) {
+        do {
             try {
                 pirate.update();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+        }while(testMove(pirate)==-1);
         if (System.currentTimeMillis() - startTime >= 1800) {// bomb cua hai tac bat dau no--> tinh khoang cach hien thoi cua qua bomb voi player
             for (BoomPlayer boomPlayer : player.boomPlayers) {
                 try {
@@ -312,6 +328,9 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
 
             }
         }
+        bufferedGraphics.setColor(Color.red);
+        bufferedGraphics.setFont(bufferedGraphics.getFont().deriveFont(20.0f));
+        bufferedGraphics.drawString("Diem : " + dem*100,650 ,50);
         g.drawImage(bufferedImage, 0, 0, null);
 
     }
@@ -367,6 +386,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                     for (ExplosiveBarrier explosiveBarrier : explosiveBarriers) {
                         if (getDistance(explosiveBarrier.positionX + 45, explosiveBarrier.positionY + 45, boomPlayer.positionX + 45, boomPlayer.positionY + 45) <= 70) {
                             boomPlayer.register(explosiveBarrier);// checking a distance before register
+                            dem++;
 
                         }
                     }
