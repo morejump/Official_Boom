@@ -87,7 +87,7 @@ public class Pirate extends Character implements IObsever {
     @Override
     public void explosive(int positionX, int positionY) throws IOException, InterruptedException {
         // action for pirate after bomb explosives (checking a current distance with bomb)
-        if (this.getDistance(this.positionX, this.positionY, positionX, positionY) <= 100) {
+        if (this.getDistance(this.positionX, this.positionY, positionX, positionY) <= 70) {
             System.out.println("Em bi no roi nhe");// just test
             isLive = false;
         }

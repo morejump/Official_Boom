@@ -39,6 +39,7 @@ public class SupportScreen implements Screen,MouseListener {
     public void pressN() {
         PlayScreen playScreen = new PlayScreen();
         frame.addKeyListener(playScreen);
+        frame.addMouseListener(playScreen);
         GameManager.getInstance().getStackScreen().push(playScreen);
     }
 

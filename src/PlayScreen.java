@@ -1,9 +1,6 @@
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +9,7 @@ import java.util.ArrayList;
 /**
  * Created by hungtran on 6/12/16.
  */
-public class PlayScreen  implements Screen,KeyListener{
+public class PlayScreen  implements Screen,KeyListener,MouseListener{
 
 
 //    Image background;
@@ -26,6 +23,7 @@ public class PlayScreen  implements Screen,KeyListener{
 //    int count = 0;
 
     Image background;
+    Image exit;
     BufferedImage bufferedImage;
     ArrayList<ExplosiveBarrier> explosiveBarriers;
     ArrayList<NonExplovsiveBarrier> nonExplovsiveBarriers;
@@ -39,6 +37,11 @@ public class PlayScreen  implements Screen,KeyListener{
         startTime02 = System.currentTimeMillis();
         pirate = new Pirate(400, 500, "haitac");
         player = new Player(500, 400, "player");
+        try {
+            exit = ImageIO.read(new File("Resources/exit.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         explosiveBarriers = new ArrayList<ExplosiveBarrier>();
         nonExplovsiveBarriers = new ArrayList<NonExplovsiveBarrier>();
 
@@ -109,7 +112,7 @@ public class PlayScreen  implements Screen,KeyListener{
             e.printStackTrace();
         }
     }
-    public int testMove() {
+    public int testMove(Character player) {
         Rectangle myPlay = new Rectangle(player.positionX+10, player.positionY+40, player.image1.getWidth(), player.image1.getHeight()+20);
         for (int i = 0; i < explosiveBarriers.size(); i++) {
             Rectangle myTree = new Rectangle(explosiveBarriers.get(i).positionX, explosiveBarriers.get(i).positionY, explosiveBarriers.get(i).image.getWidth(), explosiveBarriers.get(i).image.getHeight());
@@ -217,13 +220,13 @@ public class PlayScreen  implements Screen,KeyListener{
             pirate.boomPirates.clear();
         }
         // ham test va cham o day nhe
-        if (testMove() != player.vector)
+        if (testMove(player) != player.vector)
             try {
                 player.update();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        if (pirate != null) {
+        if (testMove(pirate)==0) {
             try {
                 pirate.update();
             } catch (InterruptedException e) {
@@ -268,20 +271,7 @@ public class PlayScreen  implements Screen,KeyListener{
         Graphics bufferedGraphics = bufferedImage.getGraphics();
         bufferedGraphics.drawImage(background, 0, 0, null);
 
-        if (pirate != null) {
-            if (pirate.isLive == true) {
-                pirate.draw(bufferedGraphics);
-            } else if (pirate.isLive == false) {
-                pirate = null;
-            }
-        }
-        if (player != null) {
-            if (player.isLive == true) {
-                player.draw(bufferedGraphics);
-            } else if (player.isLive == false) {
-                player = null;
-            }
-        }
+
 
         for (ExplosiveBarrier explosiveBarrier : explosiveBarriers) {
             if (explosiveBarrier.isLive == true) {
@@ -298,6 +288,23 @@ public class PlayScreen  implements Screen,KeyListener{
 
         for (NonExplovsiveBarrier nonExplovsiveBarrier : nonExplovsiveBarriers) {
             nonExplovsiveBarrier.draw(bufferedGraphics);
+        }
+        bufferedGraphics.drawImage(this.exit,10,25,null);
+        if (pirate != null) {
+            if (pirate.isLive == true) {
+                pirate.draw(bufferedGraphics);
+            } else if (pirate.isLive == false) {
+                pirate = null;
+                pressN();
+            }
+        }
+        if (player != null) {
+            if (player.isLive == true) {
+                player.draw(bufferedGraphics);
+            } else if (player.isLive == false) {
+                player = null;
+                pressN();
+            }
         }
         g.drawImage(bufferedImage, 0, 0, null);
 
@@ -352,7 +359,7 @@ public class PlayScreen  implements Screen,KeyListener{
                     startTime01 = System.currentTimeMillis();
                     BoomPlayer boomPlayer = player.dropBoom();
                     for (ExplosiveBarrier explosiveBarrier : explosiveBarriers) {
-                        if (getDistance(explosiveBarrier.positionX + 45, explosiveBarrier.positionY + 45, boomPlayer.positionX + 45, boomPlayer.positionY + 45) <= 120) {
+                        if (getDistance(explosiveBarrier.positionX + 45, explosiveBarrier.positionY + 45, boomPlayer.positionX + 45, boomPlayer.positionY + 45) <= 70) {
                             boomPlayer.register(explosiveBarrier);// checking a distance before register
 
                         }
@@ -366,5 +373,36 @@ public class PlayScreen  implements Screen,KeyListener{
     public void keyReleased(KeyEvent e) {
         player.speedX = 0;
         player.speedY = 0;
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        Point p = new Point(e.getX(), e.getY());
+        Rectangle rectangle4 = new Rectangle(10, 25, 100, 60);
+        if (rectangle4.contains(p)) {
+            // chuyen sang man hinh play
+            GameManager.getInstance().getStackScreen().pop();
+
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }
