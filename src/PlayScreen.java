@@ -21,6 +21,15 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
 //    long startTime;
 //    long startTime01;
 //    int count = 0;
+    Frame frame;
+
+    public void setFrame(Frame frame) {
+        this.frame = frame;
+    }
+
+    public Frame getFrame() {
+        return frame;
+    }
 
     Image background;
     Image exit;
@@ -35,7 +44,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
 
     public PlayScreen(){
         startTime02 = System.currentTimeMillis();
-        pirate = new Pirate(400, 500, "haitac");
+        pirate = new Pirate(200, 200, "haitac");
         player = new Player(500, 400, "player");
         try {
             exit = ImageIO.read(new File("Resources/exit.png"));
@@ -138,6 +147,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                     System.out.println("1");
                     return 1;
                 }
+                return -1;
             }
         }
         for (int i = 0; i < nonExplovsiveBarriers.size(); i++) {
@@ -164,6 +174,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                     System.out.println("1");
                     return 1;
                 }
+                return -1;
             }
         }
         if (player.positionX >= 690) player.positionX = 690;
@@ -174,7 +185,9 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
         return 0;
     }
     public void pressN() {
-        GameManager.getInstance().getStackScreen().push(new OverScreen());
+        OverScreen  overScreen  = new OverScreen();
+        frame.addMouseListener(overScreen);
+        GameManager.getInstance().getStackScreen().push(overScreen);
     }
 
     @Override
@@ -226,13 +239,13 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        if (testMove(pirate)==0) {
+        do {
             try {
                 pirate.update();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+        }while(testMove(pirate)==-1);
         if (System.currentTimeMillis() - startTime >= 1800) {// bomb cua hai tac bat dau no--> tinh khoang cach hien thoi cua qua bomb voi player
             for (BoomPlayer boomPlayer : player.boomPlayers) {
                 try {
