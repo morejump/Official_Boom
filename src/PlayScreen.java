@@ -29,11 +29,13 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
     ArrayList<NonExplovsiveBarrier> nonExplovsiveBarriers;
     Player player;
     Pirate pirate;
+    Audioclass audioclass;
 
     long startTime, startTime01, startTime02;
     int count = 0;
 
     public PlayScreen(){
+        audioclass = new Audioclass();
         startTime02 = System.currentTimeMillis();
         pirate = new Pirate(400, 500, "haitac");
         player = new Player(500, 400, "player");
@@ -252,6 +254,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                         boomPlayer1.register(pirate);
                     }
                     boomPlayer1.notifyBarrier(boomPlayer1.positionX, boomPlayer1.positionY);
+                    audioclass.playSound();
 
                 } catch (IOException e1) {
                     e1.printStackTrace();
@@ -278,6 +281,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                 explosiveBarrier.draw(bufferedGraphics);
             } else if (explosiveBarrier.isLive == false) {
                 if (System.currentTimeMillis() - startTime01 <= 2200 || System.currentTimeMillis() - startTime02 <= 2200) {
+//                    audioclass.playSound();
                     explosiveBarrier.draw(bufferedGraphics);
                 } else {
                     explosiveBarriers.remove(explosiveBarrier);
