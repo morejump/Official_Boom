@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jmf-2.1.1e">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../jmf-2.1.1e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../mp3plugin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

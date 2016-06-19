@@ -270,7 +270,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
                         boomPlayer1.register(pirate);
                     }
                     boomPlayer1.notifyBarrier(boomPlayer1.positionX, boomPlayer1.positionY);
-                    audioclass.playSound();
+                    audioclass.playSound("Resources/soundDan.wav");
 
                 } catch (IOException e1) {
                     e1.printStackTrace();
@@ -330,7 +330,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
         }
         bufferedGraphics.setColor(Color.red);
         bufferedGraphics.setFont(bufferedGraphics.getFont().deriveFont(20.0f));
-        bufferedGraphics.drawString("Diem : " + dem*100,650 ,50);
+        bufferedGraphics.drawString("Diem: " + dem*100,650 ,50);
         g.drawImage(bufferedImage, 0, 0, null);
 
     }
