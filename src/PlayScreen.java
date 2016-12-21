@@ -10,17 +10,6 @@ import java.util.ArrayList;
  * Created by hungtran on 6/12/16.
  */
 public class PlayScreen  implements Screen,KeyListener,MouseListener{
-
-
-//    Image background;
-//    BufferedImage bufferedImage;
-//    ArrayList<ExplosiveBarrier> explosiveBarriers;
-//    ArrayList<NonExplovsiveBarrier> nonExplovsiveBarriers;
-//    Player player;
-//    Pirate pirate;
-//    long startTime;
-//    long startTime01;
-//    int count = 0;
     Frame frame;
     int dem=0;
     public void setFrame(Frame frame) {
@@ -123,6 +112,7 @@ public class PlayScreen  implements Screen,KeyListener,MouseListener{
             e.printStackTrace();
         }
     }
+    // this function is used to test movement
     public int testMove(Character player) {
         Rectangle myPlay = new Rectangle(player.positionX+10, player.positionY+40, player.image1.getWidth(), player.image1.getHeight()+20);
         for (int i = 0; i < explosiveBarriers.size(); i++) {

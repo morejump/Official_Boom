@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by hungtran on 6/12/16.
  */
-public class SupportScreen implements Screen,MouseListener {
+public class SupportScreen implements Screen,MouseListener { // ma hinh huong dan choi game
     Frame frame;
     BufferedImage image1,image2,image3;
     int x,y;

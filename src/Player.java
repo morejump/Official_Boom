@@ -44,7 +44,7 @@ public class Player extends Character implements IObsever {
         }
     }
 
-    public double getDistance(int x1, int y1, int x2, int y2) {
+    public double getDistance(int x1, int y1, int x2, int y2) { // tính khoảng cách giữa các đối tượng
         return Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
     }
 }

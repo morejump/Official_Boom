@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Created by hungtran on 6/12/16.
  */
-public class OverScreen implements Screen,MouseListener {
+public class OverScreen implements Screen,MouseListener { // ma hinh ket thuc neu choi thua
     Image over,startAgaint;
     public OverScreen(){
         try {

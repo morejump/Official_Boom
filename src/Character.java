@@ -8,9 +8,9 @@ import java.io.IOException;
  * Created by admin on 6/11/2016.
  */
 public abstract class Character { // Lớp này là lớp cha cho 2 lớp Private và Player nhé :))
-    public int positionX;
-    public int positionY;
-    public int speedX;
+    public int positionX; // toa do x
+    public int positionY;// toa do y
+    public int speedX; // tang giam toc do o day nhe
     public int speedY;
     public BufferedImage image;
     public BufferedImage image1;
