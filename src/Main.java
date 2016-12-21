@@ -7,9 +7,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        Audioclass audioclass = new Audioclass();
-        audioclass.playSound("Resources/soundNen.wav");
-        GameWindow gameWindow = new GameWindow();
+        GameWindow gameWindow = new GameWindow();// Tạo class GameWindow tạo một luồng mới với c
         Thread thread = new Thread(gameWindow);
         thread.start();
 

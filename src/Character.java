@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by admin on 6/11/2016.
  */
-public abstract class Character {
+public abstract class Character { // Lớp này là lớp cha cho 2 lớp Private và Player nhé :))
     public int positionX;
     public int positionY;
     public int speedX;

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by Admin on 6/13/2016.
  */
-public abstract class Boom implements ISubject {
+public abstract class Boom implements ISubject { // Tạo lớp này cho hai lớp BoomPrivate và BoomPlayer thừa kế nhé
     public int positionX;
     public int positionY;
     public BufferedImage image,image1,image2,image3;

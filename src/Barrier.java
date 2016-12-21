@@ -7,13 +7,13 @@ import java.io.IOException;
 /**
  * Created by Admin on 6/15/2016.
  */
-public class Barrier {
+public class Barrier { // Lớp này là lớp cha cho 2 lớp ExploviseBarrier và lớp NonExplosive Barrier
     public int positionX;
     public int positionY;
-    public String pathImage;
+    public String pathImage; // getting path of image
     public BufferedImage image;
 
-    public Barrier(int positionX, int positionY, String pathImage) {
+    public Barrier(int positionX, int positionY, String pathImage) { // constructor
         this.positionX = positionX;
         this.positionY = positionY;
         this.pathImage= pathImage;

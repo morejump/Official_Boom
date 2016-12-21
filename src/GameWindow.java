@@ -14,17 +14,10 @@ public class GameWindow extends Frame implements Runnable {
 //    Image background;
    BufferedImage bufferedImage;
 
-//    ArrayList<ExplosiveBarrier> explosiveBarriers;
-//    ArrayList<NonExplovsiveBarrier> nonExplovsiveBarriers;
-//    Player player;
-//    Pirate pirate;
-//    long startTime;
-//    long startTime01;
-//    int count = 0;
 
     public GameWindow() {// constructor
         this.setSize(750, 650);
-        this.setTitle("Boom-Techkids");
+        this.setTitle("H2T Team D8CNPM");
         this.setVisible(true);
         MenuScreen menuScreen = new MenuScreen();
         menuScreen.setFrame(this);
@@ -37,7 +30,7 @@ public class GameWindow extends Frame implements Runnable {
 
             @Override
             public void windowClosing(WindowEvent e) {
-                System.exit(0);
+                System.exit(0); // Khi ấn vào nút X thì thoát chương trình nhé
             }
 
             @Override
