@@ -25,6 +25,6 @@ public class Barrier { // Lớp này là lớp cha cho 2 lớp ExploviseBarrier 
     }
 
     public void draw(Graphics g) {
-        g.drawImage(this.image, this.positionX, this.positionY, null);
+        g.drawImage(this.image, this.positionX, this.positionY, null); // hàm này dùng để vẽ hình ảnh với vị trí x, y, hình ảnh: image
     }
 }

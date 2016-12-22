@@ -44,6 +44,8 @@ public abstract class Boom implements ISubject { // Tạo lớp này cho hai l�
         else if(this.index==3){
             g.drawImage(this.image3, this.positionX, this.positionY, null);
         }
+        // chỉ có 3 hình ảnh của bom nổ thui nhé :))
+        //  nếu muốn tăng thời gian bom nổ thì tăng chỉ số : "5"
         if(index==3) index=0;
         if(speed>5){
             index++;
