@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1048729-8df2-4aa9-9cb4-59d4b445f82a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Image 1239.png" afterPath="$PROJECT_DIR$/Resources/Image 1239.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/Boom.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/Boom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameManager.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$3.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/Pirate.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/Pirate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/PlayScreen.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/PlayScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Character.java" afterPath="$PROJECT_DIR$/src/Character.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWindow.java" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pirate.java" afterPath="$PROJECT_DIR$/src/Pirate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlayScreen.java" afterPath="$PROJECT_DIR$/src/PlayScreen.java" />
     </list>
@@ -91,8 +84,8 @@
       <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="408">
+              <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding>
                 <element signature="e#1614#1664#0" expanded="false" />
               </folding>
@@ -696,7 +689,8 @@
     <MESSAGE value="Cleaning source - code :))" />
     <MESSAGE value="Cleaning source - code :)) 02" />
     <MESSAGE value="add some cmt :))" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some cmt :))" />
+    <MESSAGE value="collapse code :))" />
+    <option name="LAST_COMMIT_MESSAGE" value="collapse code :))" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1041,8 +1035,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="408">
+          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="e#1614#1664#0" expanded="false" />
           </folding>
