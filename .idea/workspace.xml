@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1048729-8df2-4aa9-9cb4-59d4b445f82a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WinScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/Boom.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/Boom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/ExplosiveBarrier.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/ExplosiveBarrier.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$3.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/GameWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/Pirate.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/Pirate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/PlayScreen.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/PlayScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Boom.java" afterPath="$PROJECT_DIR$/src/Boom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Character.java" afterPath="$PROJECT_DIR$/src/Character.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExplosiveBarrier.java" afterPath="$PROJECT_DIR$/src/ExplosiveBarrier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWindow.java" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pirate.java" afterPath="$PROJECT_DIR$/src/Pirate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlayScreen.java" afterPath="$PROJECT_DIR$/src/PlayScreen.java" />
     </list>
     <ignored path="WaterBoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -616,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482370397504</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cmt nhé">
+      <created>1482567221479</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1482567221479</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
