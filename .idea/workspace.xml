@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1048729-8df2-4aa9-9cb4-59d4b445f82a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/morejump.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WinScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/Boom.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/Boom.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/ExplosiveBarrier.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/ExplosiveBarrier.class" />
@@ -13,12 +12,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/Pirate.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/Pirate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WaterBoom/PlayScreen.class" afterPath="$PROJECT_DIR$/out/production/WaterBoom/PlayScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Boom.java" afterPath="$PROJECT_DIR$/src/Boom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Character.java" afterPath="$PROJECT_DIR$/src/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExplosiveBarrier.java" afterPath="$PROJECT_DIR$/src/ExplosiveBarrier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWindow.java" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pirate.java" afterPath="$PROJECT_DIR$/src/Pirate.java" />
     </list>
     <ignored path="WaterBoom.iws" />
     <ignored path=".idea/workspace.xml" />
